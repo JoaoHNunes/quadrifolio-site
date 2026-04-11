@@ -1,0 +1,731 @@
+/* ========================================
+   Quadrifolio Website - Responsive Stylesheet
+   Art Restoration Company
+   Media Queries for Tablet and Mobile Devices
+   ======================================== */
+
+/* ========================================
+   3.1 TABLET STYLES (max-width: 1024px)
+   ======================================== */
+
+@media screen and (max-width: 1024px) {
+
+    /* General Section Adjustments */
+    section {
+        padding: 60px 0;
+    }
+
+    .section-container {
+        padding: 0 30px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        letter-spacing: 2.5px;
+        margin-bottom: 40px;
+    }
+
+    /* Header Navigation - Slightly Reduced Spacing */
+    .nav-menu {
+        gap: 25px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        letter-spacing: 1.2px;
+    }
+
+    /* Hero Slider */
+    .hero-slider {
+        min-height: 500px;
+        max-height: 700px;
+    }
+
+    .hero-quote p {
+        font-size: 24px;
+    }
+
+    .hero-quote {
+        padding: 0 30px;
+    }
+
+    /* APRESENTAÇÃO Section */
+    .intro-text {
+        font-size: 17px;
+        margin-bottom: 40px;
+    }
+
+    .image-strip img {
+        height: 220px;
+    }
+
+    .description-text p {
+        font-size: 15px;
+    }
+
+    /* GALERIA Section */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .gallery-item-large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    /* SERVIÇOS Section */
+    .section-hero {
+        height: 220px;
+    }
+
+    .section-hero-title {
+        font-size: 32px;
+    }
+
+    #servicos .container,
+    #contacte-nos .container {
+        padding: 0 30px 60px;
+    }
+
+    .section-hero {
+        margin-bottom: 60px;
+    }
+
+    /* Service Grid - Can stay 3 columns or reduce to 2 */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .service-card {
+        padding: 35px 25px;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+    }
+
+    /* CONTACTE-NOS Section */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-info h3 {
+        font-size: 22px;
+    }
+
+    .contact-form {
+        padding: 35px;
+    }
+
+    /* Map */
+    .map-section {
+        height: 400px;
+    }
+
+    /* Slider Arrows - Slightly Smaller */
+    .slider-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .slider-arrow-left {
+        left: 20px;
+    }
+
+    .slider-arrow-right {
+        right: 20px;
+    }
+}
+
+/* ========================================
+   3.2 MOBILE STYLES (max-width: 768px)
+   ======================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* ========================================
+       Top Bar
+       ======================================== */
+
+    .top-bar {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+
+    .top-bar .container {
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    /* ========================================
+       Header - Mobile Menu
+       ======================================== */
+
+    header {
+        top: 24px; /* Adjusted for smaller top bar */
+    }
+
+    header .container {
+        padding: 0 15px;
+    }
+
+    .header-content {
+        height: 70px;
+    }
+
+    /* Logo - Slightly Smaller */
+    .logo-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    /* Hide Desktop Navigation */
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 94px;
+        left: 0;
+        right: 0;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        gap: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        max-height: calc(100vh - 94px);
+        overflow-y: auto;
+    }
+
+    /* Show Mobile Menu When Active */
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #F0F0F0;
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 15px 20px;
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+
+    /* Dropdown in mobile - show inline */
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        min-width: auto;
+        background-color: #F9F9F9;
+        display: none;
+        padding: 5px 0;
+    }
+
+    .nav-item.dropdown-open .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu li a {
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .dropdown-arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .nav-item.dropdown-open .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+    /* Show Hamburger Menu Button */
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+
+    /* ========================================
+       Hero Slider - Mobile
+       ======================================== */
+
+    .hero-slider {
+        height: 60vh;
+        min-height: 400px;
+        max-height: 500px;
+        margin-top: 94px; /* Top bar + header height */
+    }
+
+    .hero-quote p {
+        font-size: 20px;
+        line-height: 1.6;
+        letter-spacing: 0.3px;
+    }
+
+    .hero-quote {
+        padding: 0 20px;
+        max-width: 100%;
+    }
+
+    /* Slider Controls - Smaller */
+    .slider-dots {
+        bottom: 20px;
+        gap: 10px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-width: 1.5px;
+    }
+
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .slider-arrow-left {
+        left: 10px;
+    }
+
+    .slider-arrow-right {
+        right: 10px;
+    }
+
+    /* ========================================
+       Sections - Mobile
+       ======================================== */
+
+    section {
+        padding: 50px 0;
+    }
+
+    .section-container {
+        padding: 0 15px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        letter-spacing: 2px;
+        margin-bottom: 35px;
+    }
+
+    /* ========================================
+       APRESENTAÇÃO Section - Mobile
+       ======================================== */
+
+    .intro-text {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    /* Image Strip - Horizontal Scroll */
+    .image-strip {
+        gap: 15px;
+        margin-bottom: 35px;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+
+    .image-strip img {
+        height: 180px;
+        min-width: 250px;
+    }
+
+    /* Alternative: Stack Images Vertically (Uncomment if preferred) */
+    /*
+    .image-strip {
+        flex-direction: column;
+        overflow-x: visible;
+    }
+
+    .image-strip img {
+        width: 100%;
+        height: auto;
+        min-width: auto;
+    }
+    */
+
+    .description-text p {
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: left;
+        margin-bottom: 18px;
+    }
+
+    .btn-outline {
+        padding: 11px 30px;
+        font-size: 13px;
+        letter-spacing: 1.3px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* ========================================
+       GALERIA Section - Mobile
+       ======================================== */
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .gallery-item-large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .gallery-item {
+        border-radius: 3px;
+    }
+
+    /* Alternative: 2 Columns for Gallery (Uncomment if preferred) */
+    /*
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    */
+
+    /* ========================================
+       SERVIÇOS Section - Mobile
+       ======================================== */
+
+    .section-hero {
+        height: 180px;
+    }
+
+    .section-hero-title {
+        font-size: 26px;
+        letter-spacing: 2px;
+        padding: 0 20px;
+    }
+
+    #servicos .container,
+    #contacte-nos .container {
+        padding: 0 15px 50px;
+    }
+
+    .section-hero {
+        margin-bottom: 45px;
+    }
+
+    /* Service Cards - Stack to 1 Column */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-card {
+        padding: 30px 25px;
+    }
+
+    .service-card h3 {
+        font-size: 19px;
+        margin-bottom: 18px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .service-card a {
+        font-size: 13px;
+    }
+
+    /* ========================================
+       CONTACTE-NOS Section - Mobile
+       ======================================== */
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-info h3 {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .contact-info p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 12px;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .form-group textarea {
+        min-height: 130px;
+    }
+
+    .btn-submit {
+        padding: 13px 40px;
+        font-size: 13px;
+        letter-spacing: 1.3px;
+    }
+
+    /* ========================================
+       Map Section - Mobile
+       ======================================== */
+
+    .map-section {
+        height: 300px;
+    }
+
+    /* ========================================
+       Footer - Mobile
+       ======================================== */
+
+    footer {
+        padding: 30px 15px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}
+
+/* ========================================
+   3.3 SMALL MOBILE STYLES (max-width: 480px)
+   ======================================== */
+
+@media screen and (max-width: 480px) {
+
+    /* Hero Slider - Extra Small Devices */
+    .hero-slider {
+        min-height: 350px;
+    }
+
+    .hero-quote p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    /* Section Titles - Smaller */
+    .section-title {
+        font-size: 22px;
+        letter-spacing: 1.5px;
+    }
+
+    /* APRESENTAÇÃO Section */
+    .intro-text {
+        font-size: 15px;
+    }
+
+    .image-strip img {
+        height: 150px;
+        min-width: 220px;
+    }
+
+    .description-text p {
+        font-size: 14px;
+    }
+
+    /* Services & Contact Hero Banners */
+    .section-hero-title {
+        font-size: 22px;
+        letter-spacing: 1.5px;
+    }
+
+    /* Service Cards */
+    .service-card {
+        padding: 25px 20px;
+    }
+
+    .service-card h3 {
+        font-size: 18px;
+    }
+
+    .service-card p {
+        font-size: 13px;
+    }
+
+    /* Contact Form */
+    .contact-form {
+        padding: 25px 15px;
+    }
+
+    /* Slider Arrows - Hide on Very Small Screens */
+    .slider-arrow {
+        display: none;
+    }
+
+    /* Map - Smaller Height */
+    .map-section {
+        height: 250px;
+    }
+}
+
+/* ========================================
+   3.4 LANDSCAPE MOBILE ORIENTATION
+   ======================================== */
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+
+    /* Reduce Hero Slider Height in Landscape */
+    .hero-slider {
+        height: 80vh;
+        min-height: 350px;
+    }
+
+    .hero-quote p {
+        font-size: 18px;
+    }
+
+    /* Mobile Menu Adjustment */
+    .nav-menu {
+        max-height: calc(100vh - 94px);
+        overflow-y: auto;
+    }
+}
+
+/* ========================================
+   3.5 HOVER EFFECTS - DISABLE ON TOUCH DEVICES
+   ======================================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+    /* Disable hover scale effects on touch devices to prevent sticky states */
+    .gallery-item:hover img {
+        transform: none;
+    }
+
+    .service-card:hover {
+        transform: none;
+    }
+
+    /* Keep color changes but remove transforms */
+    .gallery-item:active img {
+        opacity: 0.9;
+    }
+
+    .service-card:active {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* ========================================
+   3.6 PRINT STYLES
+   ======================================== */
+
+@media print {
+
+    /* Hide non-essential elements when printing */
+    .top-bar,
+    header,
+    .hamburger,
+    .slider-dots,
+    .slider-arrow,
+    .btn-outline,
+    .btn-submit,
+    .map-section,
+    footer {
+        display: none !important;
+    }
+
+    /* Reset margins and padding */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        page-break-inside: avoid;
+        padding: 20px 0;
+    }
+
+    /* Ensure images print well */
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+
+    /* Typography for print */
+    .section-title {
+        color: #000;
+        font-size: 20px;
+    }
+
+    .description-text p,
+    .service-card p,
+    .contact-info p {
+        color: #000;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    /* Contact Information - Make links visible */
+    a[href^="mailto:"]:after {
+        content: " (" attr(href) ")";
+    }
+
+    a[href^="tel:"]:after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* ========================================
+   3.7 HIGH RESOLUTION DISPLAYS (RETINA)
+   ======================================== */
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi) {
+
+    /* Ensure sharp rendering on retina displays */
+    .logo-icon {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Borders appear sharper */
+    .service-card,
+    .form-group input,
+    .form-group textarea {
+        border-width: 0.5px;
+    }
+}
+
+/* ========================================
+   END OF RESPONSIVE STYLES
+   ======================================== */

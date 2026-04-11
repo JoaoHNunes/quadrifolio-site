@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quadrifolio - Conservação e Restauro de obras de arte e património histórico">
+    <title>Quadrifolio - Conservação e Restauro</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <a href="mailto:quadrifolio@sapo.pt">quadrifolio@sapo.pt</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="26" height="26" stroke="#E57373" stroke-width="2"/>
+                            <rect x="6" y="6" width="18" height="18" stroke="#E57373" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">quadrifolio</div>
+                </div>
+
+                <!-- Navigation Menu -->
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="#inicio" class="nav-link">INÍCIO</a>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#apresentacao" class="nav-link dropdown-toggle">APRESENTAÇÃO <span class="dropdown-arrow">&#9662;</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#apresentacao">Sobre Nós</a></li>
+                                <li><a href="#apresentacao-mais">Mais</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#galeria" class="nav-link">GALERIA</a>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#servicos" class="nav-link dropdown-toggle">SERVIÇOS <span class="dropdown-arrow">&#9662;</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#servico-escultura">Escultura</a></li>
+                                <li><a href="#servico-petreos">Materiais Pétreos</a></li>
+                                <li><a href="#servico-talha">Talha Dourada e Policromada</a></li>
+                                <li><a href="#servico-mural">Pintura Mural</a></li>
+                                <li><a href="#servico-cavalete">Pintura de Cavalete</a></li>
+                                <li><a href="#servico-estuques">Estuques Decorativos</a></li>
+                                <li><a href="#servico-consultadoria">Consultadoria</a></li>
+                                <li><a href="#servico-pecas">Execução de Peças</a></li>
+                                <li><a href="#servico-insetos">Controlo de Insetos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contacte-nos" class="nav-link">CONTACTE-NOS</a>
+                        </li>
+                    </ul>
+
+                    <!-- Mobile Hamburger Menu -->
+                    <button class="hamburger" id="hamburger" aria-label="Menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider" id="inicio">
+        <div class="slider-container">
+            <!-- Slide 1 -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-image" style="background-image: url('assets/images/slider/slide-1.jpg');"></div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" data-slide="2">
+                <div class="slide-image" style="background-image: url('assets/images/slider/slide-2.jpg');"></div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" data-slide="3">
+                <div class="slide-image" style="background-image: url('assets/images/slider/slide-3.jpg');"></div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide" data-slide="4">
+                <div class="slide-image" style="background-image: url('assets/images/slider/slide-4.jpg');"></div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide" data-slide="5">
+                <div class="slide-image" style="background-image: url('assets/images/slider/slide-5.jpg');"></div>
+            </div>
+        </div>
+
+        <!-- Overlay with Quote -->
+        <div class="hero-overlay">
+            <div class="hero-quote">
+                <p>"Portadoras de uma mensagem espiritual, as obras artísticas de cada povo são testemunho das suas tradições seculares"</p>
+            </div>
+        </div>
+
+        <!-- Slider Navigation Dots -->
+        <div class="slider-dots" id="slider-dots">
+            <span class="dot active" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
+            <span class="dot" data-slide="5"></span>
+        </div>
+
+        <!-- Optional Arrow Controls -->
+        <button class="slider-arrow slider-arrow-left" id="slider-prev" aria-label="Slide anterior">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <button class="slider-arrow slider-arrow-right" id="slider-next" aria-label="Próximo slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </section>
+
+    <!-- APRESENTAÇÃO Section -->
+    <section class="apresentacao" id="apresentacao">
+        <div class="container">
+            <h2 class="section-title">APRESENTAÇÃO</h2>
+
+            <div class="intro-text">
+                <p>A Quadrifólio - Conservação e Restauro, Lda. é uma empresa certificada pelo Instituto dos Museus e da Conservação que actua no domínio da Conservação e Restauro de Bens Culturais.</p>
+            </div>
+
+            <!-- Image Strip -->
+            <div class="image-strip">
+                <img src="assets/images/presentation/img-1.jpg" alt="Trabalho de restauro 1">
+                <img src="assets/images/presentation/img-2.jpg" alt="Trabalho de restauro 2">
+                <img src="assets/images/presentation/img-3.jpg" alt="Trabalho de restauro 3">
+                <img src="assets/images/presentation/img-4.jpg" alt="Trabalho de restauro 4">
+                <img src="assets/images/presentation/img-5.jpg" alt="Trabalho de restauro 5">
+                <img src="assets/images/presentation/img-6.jpg" alt="Trabalho de restauro 6">
+            </div>
+
+            <!-- Detailed Description -->
+            <div class="description-text">
+                <p>A nossa equipa é constituída por técnicos especializados nas áreas de Escultura, Pintura, Materiais Pétreos e Estuques, todos eles com formação superior ao nível de licenciatura e mestrado conferida pela Faculdade de Ciências e Tecnologia da Universidade Nova de Lisboa.</p>
+
+                <p>Desenvolvemos a nossa actividade em todo o território nacional, em estreita articulação com os organismos competentes nas áreas do Património e da Cultura, nomeadamente com a Direcção Geral do Património Cultural, com as Direcções Regionais de Cultura, com as dioceses e paróquias, com as câmaras municipais e com entidades privadas.</p>
+
+                <p>O nosso trabalho caracteriza-se por um rigoroso cumprimento das normas deontológicas e dos princípios éticos inerentes à actividade de conservação e restauro, bem como pela utilização de metodologias e técnicas cientificamente sustentadas, que nos permitem assegurar a máxima qualidade nas intervenções que efectuamos.</p>
+
+                <p>Para além da actividade de conservação e restauro propriamente dita, prestamos também serviços de consultoria técnica, elaboração de projectos de conservação e restauro, estudos de diagnóstico e caracterização do estado de conservação de bens culturais, bem como acções de formação e sensibilização no domínio da conservação preventiva.</p>
+            </div>
+
+            <!-- Learn More Button -->
+            <div class="button-container">
+                <a href="#contacte-nos" class="btn-outline">Saber Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA Section -->
+    <section class="galeria" id="galeria">
+        <div class="container-full">
+            <h2 class="section-title">GALERIA</h2>
+
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-large">
+                    <img src="assets/images/gallery/img-1.jpg" alt="Projeto de restauro 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/img-2.jpg" alt="Projeto de restauro 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/img-3.jpg" alt="Projeto de restauro 3">
+                </div>
+                <div class="gallery-item gallery-item-large">
+                    <img src="assets/images/gallery/img-4.jpg" alt="Projeto de restauro 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/img-5.jpg" alt="Projeto de restauro 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/img-6.jpg" alt="Projeto de restauro 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/img-7.jpg" alt="Projeto de restauro 7">
+                </div>
+                <div class="gallery-item gallery-item-large">
+                    <img src="assets/images/gallery/img-8.jpg" alt="Projeto de restauro 8">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/img-9.jpg" alt="Projeto de restauro 9">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/img-10.jpg" alt="Projeto de restauro 10">
+                </div>
+                <div class="gallery-item gallery-item-large">
+                    <img src="assets/images/gallery/img-11.jpg" alt="Projeto de restauro 11">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/img-12.jpg" alt="Projeto de restauro 12">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/img-13.jpg" alt="Projeto de restauro 13">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/img-14.jpg" alt="Projeto de restauro 14">
+                </div>
+                <div class="gallery-item gallery-item-large">
+                    <img src="assets/images/gallery/img-15.jpg" alt="Projeto de restauro 15">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/img-16.jpg" alt="Projeto de restauro 16">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS Section -->
+    <section class="servicos" id="servicos">
+        <!-- Hero Banner -->
+        <div class="section-hero">
+            <div class="section-hero-overlay"></div>
+            <div class="section-hero-content">
+                <h2 class="section-hero-title">SERVIÇOS</h2>
+            </div>
+        </div>
+
+        <!-- Service Cards -->
+        <div class="container">
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card" id="servico-escultura">
+                    <h3 class="service-title">Escultura</h3>
+                    <p class="service-description">Conservação e restauro de escultura em madeira, pedra, terracota, gesso e metal, abrangendo imaginária religiosa, escultura decorativa e ornamental.</p>
+                    <a href="#contacte-nos" class="service-link">Leia Mais</a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card" id="servico-petreos">
+                    <h3 class="service-title">Materiais Pétreos</h3>
+                    <p class="service-description">Conservação e restauro de fachadas, azulejaria, coberturas, cúpulas, fontes e escultura em pedra, utilizando técnicas tradicionais e contemporâneas.</p>
+                    <a href="#contacte-nos" class="service-link">Leia Mais</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card" id="servico-talha">
+                    <h3 class="service-title">Talha Dourada e Policromada</h3>
+                    <p class="service-description">Conservação e restauro de retábulos, tectos e demais elementos decorativos em talha dourada e policromada, respeitando as técnicas históricas de douramento e policromia.</p>
+                    <a href="#contacte-nos" class="service-link">Leia Mais</a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card" id="servico-mural">
+                    <h3 class="service-title">Pintura Mural</h3>
+                    <p class="service-description">Conservação e restauro de pinturas murais a têmpera ou fresco, sobre pedra, reboco ou estuque, em tectos e paredes, com especial atenção à preservação da técnica original.</p>
+                    <a href="#contacte-nos" class="service-link">Leia Mais</a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card" id="servico-cavalete">
+                    <h3 class="service-title">Pintura de Cavalete</h3>
+                    <p class="service-description">Conservação e restauro de pintura sobre madeira ou tela, incluindo tratamento de suportes, camadas pictóricas e vernizes, com metodologias cientificamente sustentadas.</p>
+                    <a href="#contacte-nos" class="service-link">Leia Mais</a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card" id="servico-estuques">
+                    <h3 class="service-title">Estuques Decorativos</h3>
+                    <p class="service-description">Conservação e restauro de estuques decorativos e ornamentais, incluindo elementos arquitectónicos em gesso, utilizando técnicas tradicionais de estucagem.</p>
+                    <a href="#contacte-nos" class="service-link">Leia Mais</a>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="service-card" id="servico-consultadoria">
+                    <h3 class="service-title">Consultadoria</h3>
+                    <p class="service-description">Estudos de diagnóstico, propostas de intervenção, relatórios de monitorização e consultoria técnica especializada para a preservação do património cultural.</p>
+                    <a href="#contacte-nos" class="service-link">Leia Mais</a>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="service-card" id="servico-pecas">
+                    <h3 class="service-title">Execução de Peças</h3>
+                    <p class="service-description">Criação de peças novas utilizando técnicas tradicionais de douramento e policromia, bem como reproduções fiéis de elementos decorativos e escultóricos.</p>
+                    <a href="#contacte-nos" class="service-link">Leia Mais</a>
+                </div>
+
+                <!-- Service 9 -->
+                <div class="service-card" id="servico-insetos">
+                    <h3 class="service-title">Controlo Integrado de Insetos</h3>
+                    <p class="service-description">Tratamento e prevenção de infestações por insectos xilófagos e bibliófagos, com métodos integrados de controlo que garantem a preservação dos bens culturais.</p>
+                    <a href="#contacte-nos" class="service-link">Leia Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTE-NOS Section -->
+    <section class="contacte-nos" id="contacte-nos">
+        <!-- Hero Banner -->
+        <div class="section-hero">
+            <div class="section-hero-overlay"></div>
+            <div class="section-hero-content">
+                <h2 class="section-hero-title">CONTACTE-NOS</h2>
+            </div>
+        </div>
+
+        <!-- Contact Content -->
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Left Column - Contact Information -->
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">CONTACTE-NOS</h3>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h4 class="contact-label">Morada</h4>
+                            <p>Rua dos Lavradores, 13</p>
+                            <p>3090-476 Maiorca, Figueira da Foz</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4 class="contact-label">Telefone</h4>
+                            <p><a href="tel:+351233939816">233 939 816</a></p>
+                            <p><a href="tel:+351919691019">919 691 019</a></p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4 class="contact-label">E-mail</h4>
+                            <p><a href="mailto:quadrifolio@sapo.pt">quadrifolio@sapo.pt</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" id="nome" name="nome" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem" class="form-label">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" class="form-textarea" rows="6" required></textarea>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn-submit">Submeter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="map">
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3045.9344890773837!2d-8.816573484596774!3d40.19984997939196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22f8f4c4c4c4c5%3A0x4c4c4c4c4c4c4c4!2sRua%20dos%20Lavradores%2013%2C%203090-476%20Maiorca!5e0!3m2!1spt-PT!2spt!4v1234567890123!5m2!1spt-PT!2spt"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização da Quadrifolio - Maiorca, Figueira da Foz">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Quadrifólio - Conservação e Restauro, Lda. Todos os direitos reservados.</p>
+                <p>Empresa certificada pelo Instituto dos Museus e da Conservação</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/slider.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
