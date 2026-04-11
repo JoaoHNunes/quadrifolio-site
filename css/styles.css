@@ -818,6 +818,54 @@ footer a:hover {
 }
 
 /* ========================================
+   2.12 SERVICE PAGE STYLING
+   ======================================== */
+
+.service-page-hero {
+    padding: 0;
+}
+
+.service-page-content {
+    padding: 80px 0;
+}
+
+.service-page-body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.service-page-body p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.service-page-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.btn-accent {
+    border-color: #E57373;
+    color: #E57373;
+}
+
+.btn-accent:hover {
+    background-color: #E57373;
+    color: #FFFFFF;
+}
+
+/* Inner page content (mais.html) */
+.page-content {
+    padding: 120px 0 80px;
+    margin-top: 109px;
+}
+
+/* ========================================
    LAYOUT CONTAINERS
    ======================================== */
 
