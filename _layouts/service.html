@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<!-- Service Hero Banner -->
+<section class="service-page-hero">
+    <div class="section-hero">
+        <div class="section-hero-overlay"></div>
+        <div class="section-hero-content">
+            <h1 class="section-hero-title">{{ page.service_title }}</h1>
+        </div>
+    </div>
+</section>
+
+<!-- Service Content -->
+<section class="service-page-content">
+    <div class="container">
+        <div class="service-page-body">
+            {{ content }}
+        </div>
+
+        <!-- Back to services + Contact CTA -->
+        <div class="service-page-actions">
+            <a href="{{ site.baseurl }}/#servicos" class="btn-outline">Todos os Serviços</a>
+            <a href="{{ site.baseurl }}/#contacte-nos" class="btn-outline btn-accent">Contacte-nos</a>
+        </div>
+    </div>
+</section>
+
+{% include contact-section.html %}

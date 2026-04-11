@@ -1,0 +1,63 @@
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-content">
+            <a href="mailto:quadrifolio@sapo.pt">quadrifolio@sapo.pt</a>
+        </div>
+    </div>
+</div>
+
+<!-- Header Navigation -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-content">
+            <!-- Logo -->
+            <a href="{{ site.baseurl }}/" class="logo">
+                <div class="logo-icon">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="26" height="26" stroke="#E57373" stroke-width="2"/>
+                        <rect x="6" y="6" width="18" height="18" stroke="#E57373" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="logo-text">quadrifolio</div>
+            </a>
+
+            <!-- Navigation Menu -->
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="{{ site.baseurl }}/#inicio" class="nav-link">INÍCIO</a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="{{ site.baseurl }}/#apresentacao" class="nav-link dropdown-toggle">APRESENTAÇÃO <span class="dropdown-arrow">&#9662;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ site.baseurl }}/#apresentacao">Sobre Nós</a></li>
+                            <li><a href="{{ site.baseurl }}/mais">Mais</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ site.baseurl }}/#galeria" class="nav-link">GALERIA</a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="{{ site.baseurl }}/#servicos" class="nav-link dropdown-toggle">SERVIÇOS <span class="dropdown-arrow">&#9662;</span></a>
+                        <ul class="dropdown-menu">
+                            {% for service in site.data.services %}
+                            <li><a href="{{ site.baseurl }}/servicos/{{ service.slug }}">{{ service.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ site.baseurl }}/#contacte-nos" class="nav-link">CONTACTE-NOS</a>
+                    </li>
+                </ul>
+
+                <!-- Mobile Hamburger Menu -->
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </nav>
+        </div>
+    </div>
+</header>

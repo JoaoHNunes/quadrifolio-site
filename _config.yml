@@ -1,0 +1,16 @@
+# Quadrifolio - Jekyll Configuration
+title: "Quadrifolio - Conservação e Restauro"
+description: "Conservação e Restauro de obras de arte e património histórico"
+url: ""
+baseurl: ""
+lang: pt
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+exclude:
+  - IMPLEMENTATION_PLAN.md
+  - CLAUDE.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
