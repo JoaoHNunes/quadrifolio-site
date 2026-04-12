@@ -52,33 +52,13 @@ button {
    2.2 TOP BAR STYLING
    ======================================== */
 
-.top-bar {
-    background-color: #333333;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 13px;
-    padding: 8px 0;
-}
-
-.top-bar .container {
-    text-align: right;
-}
-
-.top-bar a {
-    color: rgba(255, 255, 255, 0.9);
-    transition: color 0.3s ease;
-}
-
-.top-bar a:hover {
-    color: #E57373;
-}
-
 /* ========================================
    2.3 HEADER/NAVIGATION STYLING
    ======================================== */
 
 header {
     position: fixed;
-    top: 29px; /* Offset for top bar */
+    top: 0;
     left: 0;
     right: 0;
     background-color: #FFFFFF;
@@ -93,7 +73,6 @@ header .container {
 
 header.scrolled {
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
-    top: 0;
 }
 
 /* Logo Styling */
@@ -103,7 +82,7 @@ header.scrolled {
 }
 
 .logo-img {
-    height: 45px;
+    height: 55px;
     width: auto;
 }
 
@@ -254,7 +233,7 @@ header.scrolled {
     min-height: 600px;
     max-height: 800px;
     overflow: hidden;
-    margin-top: 109px; /* Top bar + header height */
+    margin-top: 80px; /* Header height */
 }
 
 .slide {
@@ -809,6 +788,7 @@ footer a:hover {
 
 .service-page-hero {
     padding: 0;
+    margin-top: 80px;
 }
 
 .service-page-content {
@@ -929,7 +909,7 @@ footer a:hover {
 /* Inner page content (mais.html) */
 .page-content {
     padding: 120px 0 80px;
-    margin-top: 109px;
+    margin-top: 80px;
 }
 
 /* ========================================
