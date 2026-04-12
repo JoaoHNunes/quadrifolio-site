@@ -99,26 +99,12 @@ header.scrolled {
 /* Logo Styling */
 .logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 5px;
 }
 
-.logo-icon {
-    width: 30px;
-    height: 30px;
-    background-color: #333333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo-text {
-    font-size: 18px;
-    font-weight: 300;
-    color: #333333;
-    text-transform: lowercase;
-    letter-spacing: 1px;
+.logo-img {
+    height: 45px;
+    width: auto;
 }
 
 /* Navigation Menu */
@@ -840,6 +826,87 @@ footer a:hover {
     color: #333333;
     margin-bottom: 20px;
     text-align: justify;
+}
+
+.service-page-body h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E57373;
+}
+
+.service-page-body h2:first-child {
+    margin-top: 0;
+}
+
+.service-page-body h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #444444;
+    margin-top: 30px;
+    margin-bottom: 8px;
+}
+
+.service-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.service-project-card {
+    background: #f9f9f9;
+    border-radius: 4px;
+    padding: 25px;
+    border-left: 3px solid #E57373;
+}
+
+.service-project-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333333;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+.service-project-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666666;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.service-work-list {
+    columns: 2;
+    column-gap: 40px;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.service-work-list li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+.service-treatments h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #444444;
+    margin-top: 35px;
+    margin-bottom: 12px;
+}
+
+.service-treatments h3:first-child {
+    margin-top: 0;
 }
 
 .service-page-actions {
