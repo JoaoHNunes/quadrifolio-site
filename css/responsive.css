@@ -158,26 +158,8 @@
 @media screen and (max-width: 768px) {
 
     /* ========================================
-       Top Bar
-       ======================================== */
-
-    .top-bar {
-        font-size: 12px;
-        padding: 6px 0;
-    }
-
-    .top-bar .container {
-        padding: 0 15px;
-        text-align: center;
-    }
-
-    /* ========================================
        Header - Mobile Menu
        ======================================== */
-
-    header {
-        top: 24px; /* Adjusted for smaller top bar */
-    }
 
     header .container {
         padding: 0 15px;
@@ -189,14 +171,14 @@
 
     /* Logo - Slightly Smaller */
     .logo-img {
-        height: 38px;
+        height: 45px;
     }
 
     /* Hide Desktop Navigation */
     .nav-menu {
         display: none;
         position: fixed;
-        top: 94px;
+        top: 70px;
         left: 0;
         right: 0;
         background-color: #FFFFFF;
@@ -205,7 +187,7 @@
         padding: 20px 0;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         z-index: 999;
-        max-height: calc(100vh - 94px);
+        max-height: calc(100vh - 70px);
         overflow-y: auto;
     }
 
@@ -276,7 +258,7 @@
         height: 60vh;
         min-height: 400px;
         max-height: 500px;
-        margin-top: 94px; /* Top bar + header height */
+        margin-top: 70px; /* Header height */
     }
 
     .hero-quote p {
@@ -641,7 +623,7 @@
 
     /* Mobile Menu Adjustment */
     .nav-menu {
-        max-height: calc(100vh - 94px);
+        max-height: calc(100vh - 70px);
         overflow-y: auto;
     }
 }
@@ -678,7 +660,6 @@
 @media print {
 
     /* Hide non-essential elements when printing */
-    .top-bar,
     header,
     .hamburger,
     .slider-dots,
