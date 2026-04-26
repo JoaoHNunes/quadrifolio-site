@@ -32,6 +32,90 @@
         setupScrollAnimations();
         setupHeaderScrollEffect();
         setupFormValidation();
+        setupImageLightbox();
+    }
+
+    /**
+     * IMAGE LIGHTBOX
+     * Click a service-project image to open it full-size; ESC / click-outside / arrows to navigate.
+     */
+    function setupImageLightbox() {
+        const images = Array.from(document.querySelectorAll('.service-project-images img'));
+        if (!images.length) return;
+
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightbox.innerHTML = `
+            <button class="lightbox-close" aria-label="Fechar">&times;</button>
+            <button class="lightbox-prev" aria-label="Imagem anterior">&#10094;</button>
+            <button class="lightbox-next" aria-label="Próxima imagem">&#10095;</button>
+            <figure class="lightbox-figure">
+                <img class="lightbox-img" alt="">
+                <figcaption class="lightbox-caption"></figcaption>
+            </figure>
+        `;
+        document.body.appendChild(lightbox);
+
+        const lbImg = lightbox.querySelector('.lightbox-img');
+        const lbCaption = lightbox.querySelector('.lightbox-caption');
+        const btnClose = lightbox.querySelector('.lightbox-close');
+        const btnPrev = lightbox.querySelector('.lightbox-prev');
+        const btnNext = lightbox.querySelector('.lightbox-next');
+
+        let currentIndex = 0;
+
+        function open(index) {
+            currentIndex = index;
+            render();
+            lightbox.classList.add('active');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function close() {
+            lightbox.classList.remove('active');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        function render() {
+            const src = images[currentIndex].getAttribute('src');
+            const alt = images[currentIndex].getAttribute('alt') || '';
+            lbImg.setAttribute('src', src);
+            lbImg.setAttribute('alt', alt);
+            lbCaption.textContent = alt;
+        }
+
+        function next() {
+            currentIndex = (currentIndex + 1) % images.length;
+            render();
+        }
+
+        function prev() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            render();
+        }
+
+        images.forEach((img, i) => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', () => open(i));
+        });
+
+        btnClose.addEventListener('click', close);
+        btnNext.addEventListener('click', next);
+        btnPrev.addEventListener('click', prev);
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) close();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') close();
+            else if (e.key === 'ArrowRight') next();
+            else if (e.key === 'ArrowLeft') prev();
+        });
     }
 
     /**

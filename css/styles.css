@@ -786,95 +786,292 @@ footer a:hover {
    2.12 SERVICE PAGE STYLING
    ======================================== */
 
+/* ==========================================================================
+   SERVICE PAGE — editorial catalogue layout
+   ========================================================================== */
+
 .service-page-hero {
     padding: 0;
     margin-top: 80px;
 }
 
 .service-page-content {
-    padding: 80px 0;
+    padding: 70px 0 100px;
+    counter-reset: project;
 }
 
 .service-page-body {
-    max-width: 800px;
+    max-width: 1180px;
     margin: 0 auto;
+    padding: 0 30px;
 }
 
-.service-page-body p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333333;
-    margin-bottom: 20px;
-    text-align: justify;
+/* --- Intro paragraph -------------------------------------------------- */
+
+.service-page-body > p.service-intro {
+    font-size: 26px;
+    color: #2a2a2a;
+    text-align: center;
+    max-width: 880px;
+    margin: 0 auto 80px;
+    line-height: 1.55;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    font-style: italic;
+    position: relative;
+    padding: 0;
 }
+
+.service-page-body > p.service-intro::before {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 2px;
+    background: #E57373;
+    margin: 0 auto 36px;
+}
+
+.service-page-body > p.service-intro::after {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: #E57373;
+    opacity: 0.4;
+    margin: 36px auto 0;
+}
+
+/* --- Section headings (Listagem / sub-groups) ------------------------ */
 
 .service-page-body h2 {
-    font-size: 22px;
+    font-size: 12px;
     font-weight: 500;
-    color: #333333;
+    color: #999999;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #E57373;
+    letter-spacing: 4px;
+    margin: 0 0 40px;
+    padding: 0;
+    border: none;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
-.service-page-body h2:first-child {
+.service-page-body h2::before {
+    content: "";
+    flex-shrink: 0;
+    width: 28px;
+    height: 1px;
+    background: #E57373;
+}
+
+.service-page-body h2:not(:first-child) {
+    margin-top: 70px;
+}
+
+.service-subgroup-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: left;
+    margin: 90px 0 70px;
+    padding: 30px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    border-top: 1px solid #ececec;
+}
+
+.service-subgroup-title::before {
+    content: "";
+    flex-shrink: 0;
+    width: 36px;
+    height: 1px;
+    background: #E57373;
     margin-top: 0;
 }
 
-.service-page-body h3 {
-    font-size: 17px;
-    font-weight: 600;
-    color: #444444;
-    margin-top: 30px;
-    margin-bottom: 8px;
+.service-subgroup-title:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
 }
+
+/* --- Projects list ---------------------------------------------------- */
 
 .service-projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin: 0 0 30px;
+    overflow: hidden;
 }
 
-.service-project-card {
-    background: #f9f9f9;
-    border-radius: 4px;
-    padding: 25px;
-    border-left: 3px solid #E57373;
+.service-project {
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+    counter-increment: project;
+    position: relative;
+    width: 100%;
 }
 
-.service-project-card h3 {
-    font-size: 15px;
-    font-weight: 600;
-    color: #333333;
-    margin: 0 0 10px 0;
-    line-height: 1.4;
+.service-project:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
-.service-project-card p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #666666;
-    margin-bottom: 0;
+/* hairline separator between rows — spans full container */
+.service-project + .service-project::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -100vw;
+    right: -100vw;
+    height: 1px;
+    background: #ececec;
+}
+
+/* --- Text block ------------------------------------------------------- */
+
+.service-project-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding-top: 24px;
+    position: relative;
+}
+
+.service-project-text::before {
+    content: counter(project, decimal-leading-zero);
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #E57373;
+    margin-bottom: 20px;
+    font-variant-numeric: tabular-nums;
+}
+
+.service-project-text h3 {
+    font-size: 21px;
+    font-weight: 400;
+    color: #2a2a2a;
+    margin: 0 0 24px 0;
+    line-height: 1.35;
+    letter-spacing: 0.2px;
+}
+
+.service-project-text h3::after {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 1px;
+    background: #d4d4d4;
+    margin-top: 24px;
+}
+
+.service-project-text p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: #6a6a6a;
+    margin: 0;
+    font-weight: 300;
+}
+
+.service-project-text p + p {
+    margin-top: 14px;
+}
+
+/* --- Images ----------------------------------------------------------- */
+
+.service-project-images {
+    display: flex;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.service-project-images img {
+    width: 245px;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+    border-radius: 1px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+                box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: transform;
+}
+
+.service-project-images img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.18);
+}
+
+/* --- Listagem de Trabalhos ------------------------------------------- */
+
+.service-listagem {
+    margin-top: 60px;
+    padding-top: 90px;
+    border-top: 1px solid #ececec;
+}
+
+.service-listagem > h2:first-child {
+    margin-top: 0;
+}
+
+.service-listagem > h2 + h2,
+.service-listagem > ul + h2 {
+    margin-top: 70px;
+}
+
+.service-listagem-intro {
     text-align: left;
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 720px;
+    margin: -16px 0 30px 0;
+    font-weight: 300;
+    font-style: italic;
 }
 
 .service-work-list {
-    columns: 2;
-    column-gap: 40px;
-    list-style: disc;
-    padding-left: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .service-work-list li {
     font-size: 14px;
     line-height: 1.6;
     color: #555555;
-    margin-bottom: 10px;
-    break-inside: avoid;
+    padding: 13px 0 13px 24px;
+    border-bottom: 1px solid #f1f1f1;
+    position: relative;
+    font-weight: 300;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.service-work-list li:last-child {
+    border-bottom: none;
+}
+
+.service-work-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 24px;
+    width: 8px;
+    height: 1px;
+    background: #E57373;
+}
+
+.service-work-list li:hover {
+    color: #2a2a2a;
+    border-bottom-color: #d8d8d8;
 }
 
 .service-treatments h3 {
@@ -904,6 +1101,110 @@ footer a:hover {
 .btn-accent:hover {
     background-color: #E57373;
     color: #FFFFFF;
+}
+
+/* ========================================
+   IMAGE LIGHTBOX
+   ======================================== */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 20, 20, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 60px;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-figure {
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: calc(100vh - 160px);
+    object-fit: contain;
+    display: block;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-caption {
+    color: #d8d8d8;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 800px;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #FFFFFF;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background-color: #E57373;
+    border-color: #E57373;
+    color: #FFFFFF;
+}
+
+.lightbox-close {
+    top: 30px;
+    right: 30px;
+    font-size: 26px;
+    line-height: 1;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.lightbox-prev { left: 30px; }
+.lightbox-next { right: 30px; }
+
+@media (max-width: 768px) {
+    .lightbox { padding: 30px 12px; }
+    .lightbox-close { top: 14px; right: 14px; width: 40px; height: 40px; font-size: 22px; }
+    .lightbox-prev,
+    .lightbox-next { width: 40px; height: 40px; }
+    .lightbox-prev { left: 10px; }
+    .lightbox-next { right: 10px; }
+    .lightbox-img { max-height: calc(100vh - 130px); }
 }
 
 /* Inner page content (mais.html) */
