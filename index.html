@@ -38,18 +38,6 @@ title: "Quadrifolio - Conservação e Restauro"
         <span class="dot" data-slide="4"></span>
         <span class="dot" data-slide="5"></span>
     </div>
-
-    <!-- Arrow Controls -->
-    <button class="slider-arrow slider-arrow-left" id="slider-prev" aria-label="Slide anterior">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </button>
-    <button class="slider-arrow slider-arrow-right" id="slider-next" aria-label="Próximo slide">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </button>
 </section>
 
 <!-- APRESENTAÇÃO Section -->
@@ -87,9 +75,15 @@ title: "Quadrifolio - Conservação e Restauro"
 
 <!-- GALERIA Section -->
 <section class="galeria" id="galeria">
-    <div class="container-full">
-        <h2 class="section-title">GALERIA</h2>
+    <!-- Hero Banner -->
+    <div class="section-hero" style="background-image: url('{{ site.baseurl }}/assets/images/galeria.jpg');">
+        <div class="section-hero-overlay"></div>
+        <div class="section-hero-content">
+            <h2 class="section-hero-title">GALERIA</h2>
+        </div>
+    </div>
 
+    <div class="container-full">
         <div class="gallery-grid">
             <div class="gallery-item gallery-item-large">
                 <img src="{{ site.baseurl }}/assets/images/gallery/img-1.jpg" alt="Retábulo em talha dourada">
@@ -100,7 +94,7 @@ title: "Quadrifolio - Conservação e Restauro"
             <div class="gallery-item">
                 <img src="{{ site.baseurl }}/assets/images/gallery/img-3.jpg" alt="Retábulo branco e dourado com grupo escultórico">
             </div>
-            <div class="gallery-item gallery-item-large">
+            <div class="gallery-item">
                 <img src="{{ site.baseurl }}/assets/images/gallery/img-4.jpg" alt="Interior de igreja com talha dourada">
             </div>
             <div class="gallery-item">
@@ -109,7 +103,7 @@ title: "Quadrifolio - Conservação e Restauro"
             <div class="gallery-item">
                 <img src="{{ site.baseurl }}/assets/images/gallery/img-6.jpg" alt="Escultura policromada de anjo">
             </div>
-            <div class="gallery-item gallery-item-large">
+            <div class="gallery-item">
                 <img src="{{ site.baseurl }}/assets/images/gallery/img-7.jpg" alt="Escultura de Nossa Senhora com o Menino em restauro">
             </div>
             <div class="gallery-item">
@@ -121,7 +115,7 @@ title: "Quadrifolio - Conservação e Restauro"
             <div class="gallery-item">
                 <img src="{{ site.baseurl }}/assets/images/gallery/img-10.jpg" alt="Reconstituição 3D de interior de igreja com pintura mural">
             </div>
-            <div class="gallery-item gallery-item-large">
+            <div class="gallery-item">
                 <img src="{{ site.baseurl }}/assets/images/gallery/img-11.jpg" alt="Fragmentos de pintura mural medieval">
             </div>
         </div>
@@ -131,7 +125,7 @@ title: "Quadrifolio - Conservação e Restauro"
 <!-- SERVIÇOS Section -->
 <section class="servicos" id="servicos">
     <!-- Hero Banner -->
-    <div class="section-hero" style="background-image: url('{{ site.baseurl }}/assets/images/backgrounds/services-hero.jpg');">
+    <div class="section-hero" style="background-image: url('{{ site.baseurl }}/assets/images/servicos.jpeg');">
         <div class="section-hero-overlay"></div>
         <div class="section-hero-content">
             <h2 class="section-hero-title">SERVIÇOS</h2>

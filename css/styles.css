@@ -465,11 +465,17 @@ section {
 
 #galeria {
     background-color: #F9F9F9;
+    padding: 0;
+}
+
+#galeria .container-full {
+    padding-bottom: 90px;
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
     gap: 20px;
 }
 
@@ -478,7 +484,7 @@ section {
     overflow: hidden;
     border-radius: 4px;
     cursor: pointer;
-    aspect-ratio: 4/3;
+    aspect-ratio: 1;
 }
 
 .gallery-item img {
@@ -512,7 +518,7 @@ section {
 /* Large Gallery Items (Featured) */
 .gallery-item-large {
     grid-column: span 2;
-    grid-row: span 2;
+    aspect-ratio: 2 / 1;
 }
 
 /* ========================================
@@ -521,15 +527,17 @@ section {
 
 #servicos {
     background-color: #FFFFFF;
-    padding: 0;
+    padding: 0 0 90px;
 }
 
-/* Section Hero Banner (Services & Contact) */
+/* Section Hero Banner (Gallery, Services & Contact) */
 .section-hero {
     position: relative;
-    height: 250px;
+    height: 350px;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -614,7 +622,7 @@ section {
 
 #contacte-nos {
     background-color: #F9F9F9;
-    padding: 0;
+    padding: 0 0 80px;
 }
 
 /* Contact Content */
@@ -748,6 +756,7 @@ section {
     width: 100%;
     height: 450px;
     position: relative;
+    padding: 0;
 }
 
 .map-section iframe {
