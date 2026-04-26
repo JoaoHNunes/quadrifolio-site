@@ -1213,6 +1213,163 @@ footer a:hover {
     margin-top: 80px;
 }
 
+/* MAIS page — uses the site's existing hero pattern + a simple two-column socios grid */
+.mais-page {
+    margin-top: 80px;
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+/* Slightly shorter hero on this page — feels lighter than the home page */
+.mais-page .section-hero {
+    margin-bottom: 0;
+    height: 240px;
+}
+
+/* Narrower content column so text doesn't sprawl across the whole viewport.
+   Selector is prefixed with .mais-page so specificity (0,2,0) beats the
+   later-defined .container rule whose padding shorthand would otherwise
+   reset padding-top to 0. */
+.mais-page .mais-section {
+    max-width: 920px;
+    padding: 50px 20px 0;
+}
+
+.mais-page .mais-section--intro {
+    padding-top: 90px;
+}
+
+.mais-page .mais-section--closing {
+    padding-bottom: 90px;
+}
+
+/* Slightly smaller, calmer section title with a small coral accent below */
+.mais-section .section-title {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 55px;
+    padding-bottom: 18px;
+}
+
+.mais-section .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: #E57373;
+}
+
+.mais-section .intro-text {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.mais-section .description-text p {
+    font-size: 14.5px;
+    line-height: 1.8;
+}
+
+.socios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+    margin-top: 20px;
+}
+
+.socio-card {
+    padding: 0;
+}
+
+/* Name + fixed-width coral hairline below — identical on every card regardless of name length */
+.socio-name {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333333;
+    margin: 0 0 12px;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.socio-name::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #E57373;
+    margin-top: 12px;
+}
+
+.socio-role {
+    font-size: 10.5px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #888888;
+    margin: 0 0 24px;
+}
+
+.socio-card .description-text p {
+    text-align: left;
+}
+
+/* Closing paragraph — clear pause before it */
+.mais-page .mais-section--closing {
+    text-align: center;
+    margin-top: 70px;
+    padding-top: 70px;
+    border-top: 1px solid #EEEEEE;
+}
+
+.mais-section--closing .description-text p {
+    max-width: 680px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.mais-section--closing .button-container {
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .mais-page .section-hero {
+        height: 200px;
+    }
+
+    .socios-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .mais-page .mais-section {
+        padding: 60px 20px 0;
+    }
+
+    .mais-page .mais-section--intro {
+        padding-top: 90px;
+    }
+
+    .mais-page .mais-section--closing {
+        margin-top: 70px;
+        padding-top: 70px;
+    }
+
+    .mais-section .section-title {
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+
+    .mais-section .intro-text {
+        font-size: 15px;
+    }
+}
+
 /* ========================================
    LAYOUT CONTAINERS
    ======================================== */
