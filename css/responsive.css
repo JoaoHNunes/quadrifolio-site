@@ -120,7 +120,8 @@
     }
 
     .service-project {
-        gap: 40px;
+        column-gap: 40px;
+        row-gap: 30px;
     }
 
     .service-project-images {
@@ -130,6 +131,16 @@
     .service-project-images img {
         width: 205px;
         height: 275px;
+    }
+
+    .gallery-2,
+    .gallery-3 {
+        grid-template-rows: 200px;
+    }
+
+    .gallery-4,
+    .gallery-5 {
+        grid-template-rows: repeat(2, 145px);
     }
 
     /* CONTACTE-NOS Section */
@@ -479,10 +490,20 @@
 
     .service-project,
     .service-project:nth-child(even) {
-        flex-direction: column;
-        gap: 30px;
-        align-items: flex-start;
+        grid-template-columns: 1fr;
+        row-gap: 24px;
     }
+
+    .service-project-text,
+    .service-project:nth-child(even) .service-project-text,
+    .service-project-images,
+    .service-project:nth-child(even) .service-project-images {
+        grid-column: 1;
+    }
+
+    .service-project-text { grid-row: 1; }
+    .service-project-images { grid-row: 2; }
+    .service-project-gallery { grid-row: 3; }
 
     .service-project + .service-project::before {
         top: -30px;
@@ -514,6 +535,34 @@
         height: auto;
         aspect-ratio: 3 / 4;
         max-height: 280px;
+    }
+
+    .service-project-gallery,
+    .gallery-2,
+    .gallery-3,
+    .gallery-4,
+    .gallery-5 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+
+    .gallery-4 img:nth-child(1),
+    .gallery-4 img:nth-child(2),
+    .gallery-4 img:nth-child(3),
+    .gallery-4 img:nth-child(4),
+    .gallery-5 img:nth-child(1),
+    .gallery-5 img:nth-child(2),
+    .gallery-5 img:nth-child(3),
+    .gallery-5 img:nth-child(4),
+    .gallery-5 img:nth-child(5) {
+        grid-row: auto;
+        grid-column: auto;
+    }
+
+    .service-project-gallery img {
+        height: auto;
+        aspect-ratio: 4 / 3;
     }
 
     .service-listagem {
